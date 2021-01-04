@@ -492,17 +492,7 @@
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_2">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>80</y>
-          <width>381</width>
-          <height>25</height>
-         </rect>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton">
+       <widget class="QPushButton" name="fileButton">
         <property name="geometry">
          <rect>
           <x>400</x>
@@ -513,16 +503,6 @@
         </property>
         <property name="text">
          <string>Wyszukaj</string>
-        </property>
-       </widget>
-       <widget class="QGraphicsView" name="graphicsView">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>280</y>
-          <width>471</width>
-          <height>281</height>
-         </rect>
         </property>
        </widget>
        <widget class="QLabel" name="label">
@@ -541,6 +521,47 @@
         </property>
         <property name="text">
          <string>Obraz źródłowy</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="originalPicture">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>270</y>
+          <width>471</width>
+          <height>281</height>
+         </rect>
+        </property>
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="fileLocationLabel">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>80</y>
+          <width>340</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="text">
+         <string/>
         </property>
        </widget>
       </widget>
@@ -980,16 +1001,6 @@
          <string>Podgląd</string>
         </property>
        </widget>
-       <widget class="QGraphicsView" name="graphicsView_2">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>280</y>
-          <width>471</width>
-          <height>281</height>
-         </rect>
-        </property>
-       </widget>
        <widget class="QLabel" name="label_4">
         <property name="geometry">
          <rect>
@@ -1081,6 +1092,25 @@
           </widget>
          </item>
         </layout>
+       </widget>
+       <widget class="QLabel" name="generatedPicture">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>270</y>
+          <width>471</width>
+          <height>281</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
        </widget>
       </widget>
      </item>
