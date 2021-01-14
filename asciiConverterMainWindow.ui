@@ -603,7 +603,7 @@
          </font>
         </property>
         <property name="text">
-         <string>Musi wynosić od 1 do 300</string>
+         <string>Musi wynosić od 1 do 500</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -619,7 +619,7 @@
          </rect>
         </property>
         <property name="text">
-         <string>300</string>
+         <string>500</string>
         </property>
        </widget>
       </widget>
@@ -1080,12 +1080,12 @@
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
-       <widget class="QLineEdit" name="CharSetInput">
+       <widget class="QLineEdit" name="charSetInput">
         <property name="geometry">
          <rect>
           <x>60</x>
           <y>90</y>
-          <width>381</width>
+          <width>291</width>
           <height>20</height>
          </rect>
         </property>
@@ -1105,7 +1105,7 @@
          </font>
         </property>
         <property name="text">
-         <string>Znaki powinny być wpisywane od &quot;najrzadszych&quot; do &quot;najgęstrzych&quot;</string>
+         <string>Znaki powinny być wpisywane od &quot;najgęstrzych&quot; do &quot;najrzadszych&quot;</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -1180,7 +1180,20 @@
          </rect>
         </property>
         <property name="text">
-         <string>Obecny zestaw znaków: ._oX#</string>
+         <string>Obecny zestaw znaków: &quot;@$#BLi-. &quot;</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="confirmCharSetButton">
+        <property name="geometry">
+         <rect>
+          <x>360</x>
+          <y>90</y>
+          <width>70</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Zatwierdź</string>
         </property>
        </widget>
       </widget>
