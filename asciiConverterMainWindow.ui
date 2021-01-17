@@ -1115,9 +1115,9 @@
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>150</y>
+          <y>160</y>
           <width>471</width>
-          <height>81</height>
+          <height>71</height>
          </rect>
         </property>
         <layout class="QGridLayout" name="gridLayout">
@@ -1194,6 +1194,19 @@
         </property>
         <property name="text">
          <string>Zatwierdź</string>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="DarkModeButton">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>240</y>
+          <width>121</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Zastosuj czarne tło</string>
         </property>
        </widget>
       </widget>
