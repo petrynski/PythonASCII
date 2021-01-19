@@ -15,6 +15,7 @@ class MainWindow(QMainWindow):
         self.image_string = ""
         self.maxImgWidth = 300
         self.preview_image = None
+        self.charset = ""
         super(MainWindow, self).__init__()
         loadUi("asciiConverterMainWindow.ui", self)
 
@@ -24,13 +25,12 @@ class MainWindow(QMainWindow):
         self.GenerateColourButton.clicked.connect(self.generate_rgb)
         self.SaveAsImgButton.clicked.connect(self.save_as_image)
         self.SaveAsTxtButton.clicked.connect(self.save_as_text)
-        self.changeCharset("#$8SXbhoni,-. ")
+        self.change_charset("#$8SXbhoni,-. ")
 
     def get_charset(self):
         txt = self.charSetInput.text()
-        print(txt)
         if txt:
-            self.changeCharset(txt)
+            self.change_charset(txt)
 
     def generate_bw(self):
         self.generate_ascii_pic(False)
@@ -61,54 +61,52 @@ class MainWindow(QMainWindow):
 
     def generate_ascii_pic(self, is_color):
         if self.pic:
-            width, height = self.pic.size
             self.maxImgWidth = int(self.ScaleInput.text())
-            if self.maxImgWidth > 500 or self.maxImgWidth < -1:
+            if self.maxImgWidth > 500 or self.maxImgWidth <= 0:
                 self.label_7.setStyleSheet("background-color: black; color: red")
                 return
-            self.image_string = ""
             self.label_7.setStyleSheet("background-color default: black; color: black")
+            self.image_string = ""
+            width, height = self.pic.size
             scale_factor = self.maxImgWidth / width
             self.scaled_pic = self.pic.resize((int(width*scale_factor), int(height*scale_factor*0.5)), Image.NEAREST)
             pix_map = self.scaled_pic.load()
             width, height = self.scaled_pic.size
             if self.DarkModeButton.isChecked():
                 self.preview_image = Image.new('RGB', (width * 7, height * 14), color=(0, 0, 0))
-                fontColor = (255, 255, 255)
-                usedCharset = self.charset[::-1]
+                font_color = (255, 255, 255)
+                used_charset = self.charset[::-1]
             else:
                 self.preview_image = Image.new('RGB', (width * 7, height * 14), color=(255, 255, 255))
-                fontColor = (0, 0, 0)
-                usedCharset = self.charset
+                font_color = (0, 0, 0)
+                used_charset = self.charset
             d = ImageDraw.Draw(self.preview_image)
-            fnt = ImageFont.truetype('cour.ttf', 12)
-            charlist = list(self.charset)
-            length = len(charlist)
-            interval = length / 256
+            font = ImageFont.truetype('cour.ttf', 12)
+            interval = len(self.charset) / 256
             if is_color:
                 for j in range(height):
                     for i in range(width):
                         r, g, b = pix_map[i, j]
                         bw = int(r/3 + g/3 + b/3)
-                        self.image_string += usedCharset[math.floor(bw*interval)]
-                        d.text((i*7, 14*j), usedCharset[math.floor(bw*interval)], font=fnt, fill=(r, g, b))
+                        self.image_string += used_charset[math.floor(bw*interval)]
+                        d.text((i*7, 14*j), used_charset[math.floor(bw*interval)], font=font, fill=(r, g, b))
                     self.image_string += '\n'
             else:
                 for j in range(height):
                     for i in range(width):
                         r, g, b = pix_map[i, j]
                         bw = int(r/3 + g/3 + b/3)
-                        self.image_string += usedCharset[math.floor(bw*interval)]
-                        d.text((i*7, 14*j), usedCharset[math.floor(bw*interval)], font=fnt, fill=fontColor)
+                        self.image_string += used_charset[math.floor(bw*interval)]
+                        d.text((i*7, 14*j), used_charset[math.floor(bw*interval)], font=font, fill=font_color)
                     self.image_string += '\n'
-
             self.gen_im = ImageQt.ImageQt(self.preview_image)
             pix = QPixmap.fromImage(self.gen_im)
             self.generatedPicture.setPixmap(pix)
 
-    def changeCharset(self, txt):
+    def change_charset(self, txt):
         self.charset = txt
         self.ActiveCharSetLabel.setText("Obecny zestaw znaków: " + '"' + txt + '"')
+
 
 def window():
     app = QApplication(sys.argv)
