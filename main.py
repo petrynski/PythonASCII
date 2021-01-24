@@ -65,7 +65,7 @@ class MainWindow(QMainWindow):
             if self.maxImgWidth > 500 or self.maxImgWidth <= 0:
                 self.label_7.setStyleSheet("background-color: black; color: red")
                 return
-            self.label_7.setStyleSheet("background-color default: black; color: black")
+            self.label_7.setStyleSheet("background-color: rgba(255, 255, 255, 0); color: rgb(255, 255, 255);")
             self.image_string = ""
             width, height = self.pic.size
             scale_factor = self.maxImgWidth / width
@@ -113,6 +113,7 @@ def window():
     main_window = MainWindow()
     widget = QtWidgets.QStackedWidget()
     widget.addWidget(main_window)
+    widget.setWindowTitle("ASCII ART GENERATOR")
     widget.setFixedWidth(1000)
     widget.setFixedHeight(600)
     widget.show()

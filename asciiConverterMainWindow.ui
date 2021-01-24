@@ -437,12 +437,21 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="animated">
+   <bool>false</bool>
+  </property>
+  <property name="tabShape">
+   <enum>QTabWidget::Rounded</enum>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <property name="sizePolicy">
     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
      <horstretch>0</horstretch>
      <verstretch>0</verstretch>
     </sizepolicy>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: qlineargradient(spread:reflect, x1:0.818, y1:1, x2:1, y2:0, stop:0 rgba(0, 75, 183, 255), stop:1 rgba(25, 43, 82, 255));</string>
    </property>
    <widget class="QWidget" name="horizontalLayoutWidget">
     <property name="geometry">
@@ -468,6 +477,10 @@
      </property>
      <item>
       <widget class="QWidget" name="widget_2" native="true">
+       <property name="styleSheet">
+        <string notr="true">background-color: qlineargradient(spread:reflect, x1:1, y1:1, x2:1, y2:0, stop:0 rgba(0, 75, 183, 255), stop:1 rgba(25, 43, 82, 255));
+</string>
+       </property>
        <widget class="QLabel" name="label_2">
         <property name="geometry">
          <rect>
@@ -479,11 +492,19 @@
         </property>
         <property name="font">
          <font>
+          <family>Bahnschrift SemiBold</family>
           <pointsize>16</pointsize>
+          <weight>75</weight>
+          <italic>false</italic>
+          <bold>true</bold>
          </font>
         </property>
         <property name="layoutDirection">
          <enum>Qt::LeftToRight</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgba(255, 255, 255, 0);
+color: rgb(255, 255, 255);</string>
         </property>
         <property name="text">
          <string>Wybierz obraz do przekształcenia</string>
@@ -501,6 +522,27 @@
           <height>25</height>
          </rect>
         </property>
+        <property name="font">
+         <font>
+          <family>Bahnschrift SemiBold</family>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton
+{
+background-color: rgba(255, 255, 255, 75);
+color: rgb(255, 255, 255);
+border: 2px solid rgba(255, 255, 255, 105);
+padding: 3px;
+}
+
+QPushButton:hover
+{
+background-color: rgba(255, 255, 255, 145);
+}</string>
+        </property>
         <property name="text">
          <string>Wyszukaj</string>
         </property>
@@ -516,8 +558,15 @@
         </property>
         <property name="font">
          <font>
+          <family>Bahnschrift SemiBold</family>
           <pointsize>16</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
          </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgba(255, 255, 255, 0);
+color: rgb(255, 255, 255);</string>
         </property>
         <property name="text">
          <string>Obraz źródłowy</string>
@@ -536,7 +585,9 @@
          <bool>false</bool>
         </property>
         <property name="styleSheet">
-         <string notr="true"/>
+         <string notr="true">background-color: rgb(50, 50, 50);
+border: 2px solid rgba(255, 255, 255, 105);
+padding: 3px;</string>
         </property>
         <property name="frameShape">
          <enum>QFrame::Box</enum>
@@ -557,6 +608,17 @@
           <height>25</height>
          </rect>
         </property>
+        <property name="font">
+         <font>
+          <family>Bahnschrift</family>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgba(255, 255, 255, 75);
+color: rgb(255, 255, 255);
+border: 2px solid rgba(255, 255, 255, 105);
+padding: 3px;</string>
+        </property>
         <property name="frameShape">
          <enum>QFrame::Box</enum>
         </property>
@@ -575,11 +637,16 @@
         </property>
         <property name="font">
          <font>
+          <family>Bahnschrift</family>
           <pointsize>16</pointsize>
          </font>
         </property>
         <property name="layoutDirection">
          <enum>Qt::LeftToRight</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgba(255, 255, 255, 0);
+color: rgb(255, 255, 255);</string>
         </property>
         <property name="text">
          <string>Ustaw szerokość przekształconego obrazu </string>
@@ -599,8 +666,15 @@
         </property>
         <property name="font">
          <font>
+          <family>Bahnschrift SemiBold</family>
           <pointsize>9</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
          </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgba(255, 255, 255, 0);
+color: rgb(255, 255, 255);</string>
         </property>
         <property name="text">
          <string>Musi wynosić od 1 do 500</string>
@@ -612,14 +686,28 @@
        <widget class="QLineEdit" name="ScaleInput">
         <property name="geometry">
          <rect>
-          <x>210</x>
+          <x>220</x>
           <y>180</y>
           <width>41</width>
           <height>20</height>
          </rect>
         </property>
+        <property name="font">
+         <font>
+          <family>Bahnschrift</family>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgba(255, 255, 255, 75);
+color: rgb(255, 255, 255);
+border: 2px solid rgba(255, 255, 255, 105);
+padding: 3px;</string>
+        </property>
         <property name="text">
          <string>500</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
         </property>
        </widget>
       </widget>
@@ -639,12 +727,23 @@
            </brush>
           </colorrole>
           <colorrole role="Button">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>194</red>
-             <green>180</green>
-             <blue>129</blue>
-            </color>
+           <brush brushstyle="LinearGradientPattern">
+            <gradient startx="1.000000000000000" starty="1.000000000000000" endx="1.000000000000000" endy="0.000000000000000" type="LinearGradient" spread="ReflectSpread" coordinatemode="ObjectBoundingMode">
+             <gradientstop position="0.000000000000000">
+              <color alpha="255">
+               <red>0</red>
+               <green>75</green>
+               <blue>183</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="1.000000000000000">
+              <color alpha="255">
+               <red>25</red>
+               <green>43</green>
+               <blue>82</blue>
+              </color>
+             </gradientstop>
+            </gradient>
            </brush>
           </colorrole>
           <colorrole role="Light">
@@ -711,21 +810,43 @@
            </brush>
           </colorrole>
           <colorrole role="Base">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>255</red>
-             <green>255</green>
-             <blue>255</blue>
-            </color>
+           <brush brushstyle="LinearGradientPattern">
+            <gradient startx="1.000000000000000" starty="1.000000000000000" endx="1.000000000000000" endy="0.000000000000000" type="LinearGradient" spread="ReflectSpread" coordinatemode="ObjectBoundingMode">
+             <gradientstop position="0.000000000000000">
+              <color alpha="255">
+               <red>0</red>
+               <green>75</green>
+               <blue>183</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="1.000000000000000">
+              <color alpha="255">
+               <red>25</red>
+               <green>43</green>
+               <blue>82</blue>
+              </color>
+             </gradientstop>
+            </gradient>
            </brush>
           </colorrole>
           <colorrole role="Window">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>194</red>
-             <green>180</green>
-             <blue>129</blue>
-            </color>
+           <brush brushstyle="LinearGradientPattern">
+            <gradient startx="1.000000000000000" starty="1.000000000000000" endx="1.000000000000000" endy="0.000000000000000" type="LinearGradient" spread="ReflectSpread" coordinatemode="ObjectBoundingMode">
+             <gradientstop position="0.000000000000000">
+              <color alpha="255">
+               <red>0</red>
+               <green>75</green>
+               <blue>183</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="1.000000000000000">
+              <color alpha="255">
+               <red>25</red>
+               <green>43</green>
+               <blue>82</blue>
+              </color>
+             </gradientstop>
+            </gradient>
            </brush>
           </colorrole>
           <colorrole role="Shadow">
@@ -776,12 +897,23 @@
            </brush>
           </colorrole>
           <colorrole role="Button">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>194</red>
-             <green>180</green>
-             <blue>129</blue>
-            </color>
+           <brush brushstyle="LinearGradientPattern">
+            <gradient startx="1.000000000000000" starty="1.000000000000000" endx="1.000000000000000" endy="0.000000000000000" type="LinearGradient" spread="ReflectSpread" coordinatemode="ObjectBoundingMode">
+             <gradientstop position="0.000000000000000">
+              <color alpha="255">
+               <red>0</red>
+               <green>75</green>
+               <blue>183</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="1.000000000000000">
+              <color alpha="255">
+               <red>25</red>
+               <green>43</green>
+               <blue>82</blue>
+              </color>
+             </gradientstop>
+            </gradient>
            </brush>
           </colorrole>
           <colorrole role="Light">
@@ -848,21 +980,43 @@
            </brush>
           </colorrole>
           <colorrole role="Base">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>255</red>
-             <green>255</green>
-             <blue>255</blue>
-            </color>
+           <brush brushstyle="LinearGradientPattern">
+            <gradient startx="1.000000000000000" starty="1.000000000000000" endx="1.000000000000000" endy="0.000000000000000" type="LinearGradient" spread="ReflectSpread" coordinatemode="ObjectBoundingMode">
+             <gradientstop position="0.000000000000000">
+              <color alpha="255">
+               <red>0</red>
+               <green>75</green>
+               <blue>183</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="1.000000000000000">
+              <color alpha="255">
+               <red>25</red>
+               <green>43</green>
+               <blue>82</blue>
+              </color>
+             </gradientstop>
+            </gradient>
            </brush>
           </colorrole>
           <colorrole role="Window">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>194</red>
-             <green>180</green>
-             <blue>129</blue>
-            </color>
+           <brush brushstyle="LinearGradientPattern">
+            <gradient startx="1.000000000000000" starty="1.000000000000000" endx="1.000000000000000" endy="0.000000000000000" type="LinearGradient" spread="ReflectSpread" coordinatemode="ObjectBoundingMode">
+             <gradientstop position="0.000000000000000">
+              <color alpha="255">
+               <red>0</red>
+               <green>75</green>
+               <blue>183</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="1.000000000000000">
+              <color alpha="255">
+               <red>25</red>
+               <green>43</green>
+               <blue>82</blue>
+              </color>
+             </gradientstop>
+            </gradient>
            </brush>
           </colorrole>
           <colorrole role="Shadow">
@@ -913,12 +1067,23 @@
            </brush>
           </colorrole>
           <colorrole role="Button">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>194</red>
-             <green>180</green>
-             <blue>129</blue>
-            </color>
+           <brush brushstyle="LinearGradientPattern">
+            <gradient startx="1.000000000000000" starty="1.000000000000000" endx="1.000000000000000" endy="0.000000000000000" type="LinearGradient" spread="ReflectSpread" coordinatemode="ObjectBoundingMode">
+             <gradientstop position="0.000000000000000">
+              <color alpha="255">
+               <red>0</red>
+               <green>75</green>
+               <blue>183</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="1.000000000000000">
+              <color alpha="255">
+               <red>25</red>
+               <green>43</green>
+               <blue>82</blue>
+              </color>
+             </gradientstop>
+            </gradient>
            </brush>
           </colorrole>
           <colorrole role="Light">
@@ -985,21 +1150,43 @@
            </brush>
           </colorrole>
           <colorrole role="Base">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>194</red>
-             <green>180</green>
-             <blue>129</blue>
-            </color>
+           <brush brushstyle="LinearGradientPattern">
+            <gradient startx="1.000000000000000" starty="1.000000000000000" endx="1.000000000000000" endy="0.000000000000000" type="LinearGradient" spread="ReflectSpread" coordinatemode="ObjectBoundingMode">
+             <gradientstop position="0.000000000000000">
+              <color alpha="255">
+               <red>0</red>
+               <green>75</green>
+               <blue>183</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="1.000000000000000">
+              <color alpha="255">
+               <red>25</red>
+               <green>43</green>
+               <blue>82</blue>
+              </color>
+             </gradientstop>
+            </gradient>
            </brush>
           </colorrole>
           <colorrole role="Window">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>194</red>
-             <green>180</green>
-             <blue>129</blue>
-            </color>
+           <brush brushstyle="LinearGradientPattern">
+            <gradient startx="1.000000000000000" starty="1.000000000000000" endx="1.000000000000000" endy="0.000000000000000" type="LinearGradient" spread="ReflectSpread" coordinatemode="ObjectBoundingMode">
+             <gradientstop position="0.000000000000000">
+              <color alpha="255">
+               <red>0</red>
+               <green>75</green>
+               <blue>183</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="1.000000000000000">
+              <color alpha="255">
+               <red>25</red>
+               <green>43</green>
+               <blue>82</blue>
+              </color>
+             </gradientstop>
+            </gradient>
            </brush>
           </colorrole>
           <colorrole role="Shadow">
@@ -1041,6 +1228,9 @@
          </disabled>
         </palette>
        </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: qlineargradient(spread:reflect, x1:1, y1:1, x2:1, y2:0, stop:0 rgba(0, 75, 183, 255), stop:1 rgba(25, 43, 82, 255));</string>
+       </property>
        <widget class="QLabel" name="label_3">
         <property name="geometry">
          <rect>
@@ -1052,8 +1242,15 @@
         </property>
         <property name="font">
          <font>
+          <family>Bahnschrift SemiBold</family>
           <pointsize>16</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
          </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgba(255, 255, 255, 0);
+color: rgb(255, 255, 255);</string>
         </property>
         <property name="text">
          <string>Podgląd</string>
@@ -1070,8 +1267,15 @@
         </property>
         <property name="font">
          <font>
+          <family>Bahnschrift SemiBold</family>
           <pointsize>16</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
          </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgba(255, 255, 255, 0);
+color: rgb(255, 255, 255);</string>
         </property>
         <property name="text">
          <string>Określ zbiór znaków</string>
@@ -1089,6 +1293,17 @@
           <height>20</height>
          </rect>
         </property>
+        <property name="font">
+         <font>
+          <family>Bahnschrift</family>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgba(255, 255, 255, 75);
+color: rgb(255, 255, 255);
+border: 2px solid rgba(255, 255, 255, 105);
+padding: 3px;</string>
+        </property>
        </widget>
        <widget class="QLabel" name="label_5">
         <property name="geometry">
@@ -1101,8 +1316,13 @@
         </property>
         <property name="font">
          <font>
+          <family>Bahnschrift</family>
           <pointsize>9</pointsize>
          </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgba(255, 255, 255, 0);
+color: rgb(255, 255, 255);</string>
         </property>
         <property name="text">
          <string>Znaki powinny być wpisywane od &quot;najgęstrzych&quot; do &quot;najrzadszych&quot;</string>
@@ -1111,7 +1331,7 @@
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
-       <widget class="QWidget" name="gridLayoutWidget">
+       <widget class="QGroupBox" name="gridGroupBox">
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -1120,9 +1340,35 @@
           <height>71</height>
          </rect>
         </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgba(255, 255, 255, 0);
+color: rgb(255, 255, 255);
+border: none;</string>
+        </property>
         <layout class="QGridLayout" name="gridLayout">
          <item row="0" column="0">
           <widget class="QPushButton" name="GenerateBWButton">
+           <property name="font">
+            <font>
+             <family>Bahnschrift SemiBold</family>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton
+{
+background-color: rgba(255, 255, 255, 75);
+color: rgb(255, 255, 255);
+border: 2px solid rgba(255, 255, 255, 105);
+padding: 3px;
+}
+
+QPushButton:hover
+{
+background-color: rgba(255, 255, 255, 145);
+}</string>
+           </property>
            <property name="text">
             <string>Generuj czarno-biały</string>
            </property>
@@ -1130,6 +1376,27 @@
          </item>
          <item row="0" column="1">
           <widget class="QPushButton" name="GenerateColourButton">
+           <property name="font">
+            <font>
+             <family>Bahnschrift SemiBold</family>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton
+{
+background-color: rgba(255, 255, 255, 75);
+color: rgb(255, 255, 255);
+border: 2px solid rgba(255, 255, 255, 105);
+padding: 3px;
+}
+
+QPushButton:hover
+{
+background-color: rgba(255, 255, 255, 145);
+}</string>
+           </property>
            <property name="text">
             <string>Generuj kolorowy</string>
            </property>
@@ -1137,6 +1404,27 @@
          </item>
          <item row="1" column="0">
           <widget class="QPushButton" name="SaveAsImgButton">
+           <property name="font">
+            <font>
+             <family>Bahnschrift SemiBold</family>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton
+{
+background-color: rgba(255, 255, 255, 75);
+color: rgb(255, 255, 255);
+border: 2px solid rgba(255, 255, 255, 105);
+padding: 3px;
+}
+
+QPushButton:hover
+{
+background-color: rgba(255, 255, 255, 145);
+}</string>
+           </property>
            <property name="text">
             <string>Zapisz jako obraz</string>
            </property>
@@ -1144,6 +1432,27 @@
          </item>
          <item row="1" column="1">
           <widget class="QPushButton" name="SaveAsTxtButton">
+           <property name="font">
+            <font>
+             <family>Bahnschrift SemiBold</family>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton
+{
+background-color: rgba(255, 255, 255, 75);
+color: rgb(255, 255, 255);
+border: 2px solid rgba(255, 255, 255, 105);
+padding: 3px;
+}
+
+QPushButton:hover
+{
+background-color: rgba(255, 255, 255, 145);
+}</string>
+           </property>
            <property name="text">
             <string>Zapisz jako tekst</string>
            </property>
@@ -1159,6 +1468,11 @@
           <width>471</width>
           <height>281</height>
          </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(50, 50, 50);
+border: 2px solid rgba(255, 255, 255, 105);
+padding: 3px;</string>
         </property>
         <property name="frameShape">
          <enum>QFrame::Box</enum>
@@ -1179,6 +1493,17 @@
           <height>20</height>
          </rect>
         </property>
+        <property name="font">
+         <font>
+          <family>Bahnschrift SemiBold</family>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgba(255, 255, 255, 0);
+color: rgb(255, 255, 255);</string>
+        </property>
         <property name="text">
          <string>Obecny zestaw znaków: &quot;@$#BLi-. &quot;</string>
         </property>
@@ -1191,6 +1516,27 @@
           <width>70</width>
           <height>20</height>
          </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Bahnschrift SemiBold</family>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton
+{
+background-color: rgba(255, 255, 255, 75);
+color: rgb(255, 255, 255);
+border: 2px solid rgba(255, 255, 255, 105);
+padding: 3px;
+}
+
+QPushButton:hover
+{
+background-color: rgba(255, 255, 255, 145);
+}</string>
         </property>
         <property name="text">
          <string>Zatwierdź</string>
@@ -1205,6 +1551,17 @@
           <height>17</height>
          </rect>
         </property>
+        <property name="font">
+         <font>
+          <family>Bahnschrift SemiBold</family>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgba(255, 255, 255, 0);
+color: rgb(255, 255, 255);</string>
+        </property>
         <property name="text">
          <string>Zastosuj czarne tło</string>
         </property>
@@ -1214,7 +1571,6 @@
     </layout>
    </widget>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
  <connections/>
