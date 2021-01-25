@@ -1325,7 +1325,7 @@ padding: 3px;</string>
 color: rgb(255, 255, 255);</string>
         </property>
         <property name="text">
-         <string>Znaki powinny być wpisywane od &quot;najgęstrzych&quot; do &quot;najrzadszych&quot;</string>
+         <string>Znaki powinny być wpisywane od &quot;najgęstszych&quot; do &quot;najrzadszych&quot;</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
